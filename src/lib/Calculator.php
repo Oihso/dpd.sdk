@@ -1,9 +1,9 @@
 <?php
-namespace Ipol\DPD;
+namespace Oihso\DPD;
 
-use \Ipol\DPD\API\User\User as API;
-use \Ipol\DPD\API\User\UserInterface;
-use \Ipol\DPD\Currency\ConverterInterface;
+use \Oihso\DPD\API\User\User as API;
+use \Oihso\DPD\API\User\UserInterface;
+use \Oihso\DPD\Currency\ConverterInterface;
 
 /**
  * Класс калькулятор стоимости доставки
@@ -79,8 +79,8 @@ class Calculator
 	/**
 	 * Конструктор
 	 * 
-	 * @param \Ipol\DPD\Shipment               $shipment  отправление
-	 * @param \Ipol\DPD\API\User\UserInterface $api       инстанс API который будет использован в расчете,
+	 * @param \Oihso\DPD\Shipment               $shipment  отправление
+	 * @param \Oihso\DPD\API\User\UserInterface $api       инстанс API который будет использован в расчете,
 	 *                                                    по умолчанию будет взят из конфига
 	 */
 	public function __construct(Shipment $shipment, UserInterface $api = null)
@@ -106,7 +106,7 @@ class Calculator
 	/**
 	 * Устанавливает конвертер валюты
 	 * 
-	 * @param \Ipol\DPD\Currency\ConverterInterface $converter
+	 * @param \Oihso\DPD\Currency\ConverterInterface $converter
 	 * 
 	 * @return self
 	 */
@@ -120,7 +120,7 @@ class Calculator
 	/**
 	 * Возвращает конвертер валюты
 	 * 
-	 * @return \Ipol\DPD\Currency\ConverterInterface $converter
+	 * @return \Oihso\DPD\Currency\ConverterInterface $converter
 	 */
 	public function getCurrencyConverter()
 	{
@@ -131,7 +131,7 @@ class Calculator
 	/**
 	 * Устанавливает посылку для расчета стоимости
 	 * 
-	 * @param \Ipol\DPD\Shipment $shipment
+	 * @param \Oihso\DPD\Shipment $shipment
 	 * 
 	 * @return self
 	 */
@@ -145,7 +145,7 @@ class Calculator
 	/**
 	 * Возвращает посыдку для расчета стоимости
 	 * 
-	 * @return \Ipol\DPD\Shipment $shipment
+	 * @return \Oihso\DPD\Shipment $shipment
 	 */
 	public function getShipment()
 	{

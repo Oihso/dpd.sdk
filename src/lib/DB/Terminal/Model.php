@@ -1,9 +1,9 @@
 <?php
-namespace Ipol\DPD\DB\Terminal;
+namespace Oihso\DPD\DB\Terminal;
 
-use Ipol\DPD\DB\Connection;
-use Ipol\DPD\DB\Model as BaseModel;
-use Ipol\DPD\Shipment;
+use Oihso\DPD\DB\Connection;
+use Oihso\DPD\DB\Model as BaseModel;
+use Oihso\DPD\Shipment;
 
 /**
  * Модель одной записи таблицы терминалов
@@ -13,7 +13,7 @@ class Model extends BaseModel implements \JsonSerializable
 	/**
 	 * Проверяет может ли терминал принять посылку
 	 * 
-	 * @param  \Ipol\DPD\Shipment $shipment
+	 * @param  \Oihso\DPD\Shipment $shipment
 	 * @param  bool               $checkLocation
 	 * 
 	 * @return bool
@@ -54,7 +54,7 @@ class Model extends BaseModel implements \JsonSerializable
 	/**
 	 * Проверяет возможность принять НПП на терминале
 	 * 
-	 * @param \Ipol\DPD\Shipment $shipment
+	 * @param \Oihso\DPD\Shipment $shipment
 	 * 
 	 * @return bool
 	 */
@@ -85,7 +85,7 @@ class Model extends BaseModel implements \JsonSerializable
 	/**
 	 * Проверяет габариты посылки на возможность ее принятия на терминале
 	 * 
-	 * @param \Ipol\DPD\Shipment $shipment
+	 * @param \Oihso\DPD\Shipment $shipment
 	 * 
 	 * @return bool
 	 */

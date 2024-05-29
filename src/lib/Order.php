@@ -1,12 +1,12 @@
 <?php
-namespace Ipol\DPD;
+namespace Oihso\DPD;
 
-use \Ipol\DPD\Utils;
-use \Ipol\DPD\DB\Order\Model;
-use \Ipol\DPD\API\User\User as API;
-use \Ipol\DPD\Config\ConfigInterface;
-use \Ipol\DPD\Currency\ConverterInterface;
-use \Ipol\DPD\DB\Connection as DB;
+use \Oihso\DPD\Utils;
+use \Oihso\DPD\DB\Order\Model;
+use \Oihso\DPD\API\User\User as API;
+use \Oihso\DPD\Config\ConfigInterface;
+use \Oihso\DPD\Currency\ConverterInterface;
+use \Oihso\DPD\DB\Connection as DB;
 
 /**
  * Класс для работы со внешним заказом DPD
@@ -210,17 +210,17 @@ class Order
 	const PAYMENT_TYPE_OUO = 'ОУО';
 
 	/**
-	 * @var \Ipol\DPD\DB\Order\Model
+	 * @var \Oihso\DPD\DB\Order\Model
 	 */
 	protected $model;
 
 	/**
-	 * @var \Ipol\DPD\API\User\UserInterface
+	 * @var \Oihso\DPD\API\User\UserInterface
 	 */
 	protected $api;
 
 	/**
-	 * @var \Ipol\DPD\Currency\ConverterInterface
+	 * @var \Oihso\DPD\Currency\ConverterInterface
 	 */
 	protected $currencyConverter;
 
@@ -232,7 +232,7 @@ class Order
 	/**
 	 * Конструктор класса
 	 * 
-	 * @param \Ipol\DPD\DB\Order\Model $model одна запись из таблицы
+	 * @param \Oihso\DPD\DB\Order\Model $model одна запись из таблицы
 	 */
 	public function __construct(Model $model)
 	{
@@ -240,7 +240,7 @@ class Order
 	}
 
 	/**
-	 * @return \Ipol\DPD\Config\ConfigInterface
+	 * @return \Oihso\DPD\Config\ConfigInterface
 	 */
 	public function getConfig()
 	{
@@ -276,7 +276,7 @@ class Order
 	 * Если оплата идет наложенным платежем будет возвращен аккаунт привязанный к валюте заказа, 
 	 * при условии что он указан. 
 	 * 
-	 * @return \Ipol\DPD\User\UserInterface
+	 * @return \Oihso\DPD\User\UserInterface
 	 */
 	public function getApi()
 	{
@@ -296,7 +296,7 @@ class Order
 	/**
 	 * Создает заказ в системе DPD
 	 * 
-	 * @return \Ipol\DPD\Result
+	 * @return \Oihso\DPD\Result
 	 */
 	public function create()
 	{
@@ -406,7 +406,7 @@ class Order
 	/**
 	 * Отменяет заказ в DPD
 	 * 
-	 * @return \Ipol\DPD\Result
+	 * @return \Oihso\DPD\Result
 	 */
 	public function cancel()
 	{
@@ -442,7 +442,7 @@ class Order
 	/**
 	 * Проверяет статус заказа
 	 * 
-	 * @return \Ipol\DPD\Result
+	 * @return \Oihso\DPD\Result
 	 */
 	public function checkStatus()
 	{
@@ -479,7 +479,7 @@ class Order
 	/**
 	 * Запрашивает файл с наклейками DPD
 	 * 
-	 * @return \Ipol\DPD\Result
+	 * @return \Oihso\DPD\Result
 	 */
 	public function getLabelFile($count = 1, $fileFormat = 'PDF', $pageSize = 'A5')
 	{
@@ -510,7 +510,7 @@ class Order
 	/**
 	 * Получает файл накладной
 	 * 
-	 * @return \Ipol\DPD\Result;
+	 * @return \Oihso\DPD\Result;
 	 */
 	public function getInvoiceFile()
 	{
@@ -569,7 +569,7 @@ class Order
 	 * @param  $fileName
 	 * @param  $fileContent
 	 * 
-	 * @return \Ipol\DPD\Result
+	 * @return \Oihso\DPD\Result
 	 */
 	protected function saveFile($fieldToSave, $fileName, $fileContent)
 	{

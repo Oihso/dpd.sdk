@@ -2,9 +2,9 @@
 require __DIR__ .'/../src/autoload.php';
 
 $options = require __DIR__ .'/config.php';
-$config  = new \Ipol\DPD\Config\Config($options);
+$config  = new \Oihso\DPD\Config\Config($options);
 
-$shipment = new \Ipol\DPD\Shipment($config);
+$shipment = new \Oihso\DPD\Shipment($config);
 $shipment->setSender('Россия', 'Москва', 'г. Москва');
 $shipment->setReceiver('Россия', 'Москва', 'г. Москва');
 

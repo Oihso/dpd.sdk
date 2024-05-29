@@ -1,7 +1,7 @@
 <?php
-namespace Ipol\DPD\DB\Order;
+namespace Oihso\DPD\DB\Order;
 
-use Ipol\DPD\DB\AbstractTable;
+use Oihso\DPD\DB\AbstractTable;
 
 /**
  * Класс для работы с таблицей заказов
@@ -15,7 +15,7 @@ class Table extends AbstractTable
 	 */
 	public function getTableName()
 	{
-		return 'b_ipol_dpd_order';
+		return 'b_Oihso_dpd_order';
 	}
 
 	/**
@@ -25,7 +25,7 @@ class Table extends AbstractTable
 	 */
 	public function getModelClass()
 	{
-		return \Ipol\DPD\DB\Order\Model::class;
+		return \Oihso\DPD\DB\Order\Model::class;
 	}
 	
 	/**
@@ -129,7 +129,7 @@ class Table extends AbstractTable
 	 * @param integer $orderId
 	 * @param bool    $autoCreate создавать пустую модель, если не найдена
 	 * 
-	 * @return \Ipol\DPD\DB\Order\Model
+	 * @return \Oihso\DPD\DB\Order\Model
 	 */
 	public function getByOrderId($orderId, $autoCreate = false)
 	{

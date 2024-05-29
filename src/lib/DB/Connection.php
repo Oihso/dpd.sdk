@@ -1,8 +1,8 @@
 <?php
-namespace Ipol\DPD\DB;
+namespace Oihso\DPD\DB;
 
 use \PDO;
-use \Ipol\DPD\Config\ConfigInterface;
+use \Oihso\DPD\Config\ConfigInterface;
 
 /**
  * Класс реализует соединения с БД и организует доступ к таблицами
@@ -15,9 +15,9 @@ class Connection implements ConnectionInterface
      * @var array
      */
     protected static $classmap = array(
-        'location' => '\\Ipol\\DPD\\DB\\Location\\Table',
-		'terminal' => '\\Ipol\\DPD\\DB\\Terminal\\Table',
-		'order'    => '\\Ipol\\DPD\\DB\\Order\\Table',
+        'location' => '\\Oihso\\DPD\\DB\\Location\\Table',
+		'terminal' => '\\Oihso\\DPD\\DB\\Terminal\\Table',
+		'order'    => '\\Oihso\\DPD\\DB\\Order\\Table',
     );
 
     /**
@@ -28,7 +28,7 @@ class Connection implements ConnectionInterface
     /**
      * Возвращает инстанс подключения
      * 
-     * @return \Ipol\DPD\DB\ConnectionInterface
+     * @return \Oihso\DPD\DB\ConnectionInterface
      */
     public static function getInstance(ConfigInterface $config)
     {
@@ -63,7 +63,7 @@ class Connection implements ConnectionInterface
     /**
      * Возвращает конфиг
      * 
-     * @return \Ipol\DPD\Config\ConfigInterface
+     * @return \Oihso\DPD\Config\ConfigInterface
      */
     public function getConfig()
     {
@@ -114,7 +114,7 @@ class Connection implements ConnectionInterface
      * 
      * @param string $tableName имя маппера/таблицы
      * 
-     * @return \Ipol\DPD\DB\TableInterface
+     * @return \Oihso\DPD\DB\TableInterface
      */
     public function getTable($tableName)
     {

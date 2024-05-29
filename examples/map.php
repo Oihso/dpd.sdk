@@ -2,9 +2,9 @@
 require __DIR__ .'/../src/autoload.php';
 
 $options = require __DIR__ .'/config.php';
-$config  = new \Ipol\DPD\Config\Config($options);
+$config  = new \Oihso\DPD\Config\Config($options);
 
-$shipment = new \Ipol\DPD\Shipment($config);
+$shipment = new \Oihso\DPD\Shipment($config);
 $shipment->setSender('Россия', 'Москва', 'г. Москва');
 $shipment->setReceiver('Россия', 'Краснодарский', 'г. Краснодар');
 
@@ -44,7 +44,7 @@ $tariffs = [
     'pickup'  => $shipment->setSelfDelivery(false)->calculator()->calculate(),
 ];
 
-$terminals = \Ipol\DPD\DB\Connection::getInstance($config)->getTable('terminal')->findModels([
+$terminals = \Oihso\DPD\DB\Connection::getInstance($config)->getTable('terminal')->findModels([
     'where' => 'LOCATION_ID = :location',
     'bind'  => ['location' => $shipment->getReceiver()['CITY_ID']],
 ]);

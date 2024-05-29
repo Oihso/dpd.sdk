@@ -1,5 +1,5 @@
 <?php
-namespace Ipol\DPD\DB;
+namespace Oihso\DPD\DB;
 
 /**
  * Интерфейс работы с таблицой БД
@@ -9,7 +9,7 @@ interface TableInterface
     /**
      * Возвращает соединение ассоциированное с таблицей
      * 
-     * @return \Ipol\DPD\DB\ConnectionInterface
+     * @return \Oihso\DPD\DB\ConnectionInterface
      */
     public function getConnection();
 

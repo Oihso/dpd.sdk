@@ -1,7 +1,7 @@
 <?php
-namespace Ipol\DPD\API\Service;
+namespace Oihso\DPD\API\Service;
 
-use \Ipol\DPD\API\User\UserInterface;
+use \Oihso\DPD\API\User\UserInterface;
 use Bitrix\Main\Web\HttpClient;
 
 /**
@@ -19,7 +19,7 @@ class TrackingOrder implements ServiceInterface
     /**
      * Конструктор класса
      * 
-     * @param \Ipol\DPD\API\User\UserInterface
+     * @param \Oihso\DPD\API\User\UserInterface
      */
 	public function __construct(UserInterface $user)
 	{

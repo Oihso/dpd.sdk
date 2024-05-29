@@ -1,5 +1,5 @@
 <?php
-namespace Ipol\DPD;
+namespace Oihso\DPD;
 
 class Dictionary
 	implements \ArrayAccess, \Iterator, \Countable

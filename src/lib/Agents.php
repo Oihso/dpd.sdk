@@ -1,8 +1,8 @@
 <?php
-namespace Ipol\DPD;
+namespace Oihso\DPD;
 
-use \Ipol\DPD\API\User\User as API;
-use \Ipol\DPD\Config\ConfigInterface;
+use \Oihso\DPD\API\User\User as API;
+use \Oihso\DPD\Config\ConfigInterface;
 
 /**
  * Класс содержит набор готовых методов реализующих выполнение периодических
@@ -18,7 +18,7 @@ class Agents
 	 * На втором этапе обрабатываются остальные заказы. Для получения изменений по статусам используется 
 	 * метод getStatesByClient
 	 * 
-	 * @param \Ipol\DPD\Config\ConfigInterface $config
+	 * @param \Oihso\DPD\Config\ConfigInterface $config
 	 * 
 	 * @return void
 	 */
@@ -38,13 +38,13 @@ class Agents
 	protected static function checkPindingOrderStatus(ConfigInterface $config)
 	{
 		$ret    = [];
-		$table  = \Ipol\DPD\DB\Connection::getInstance($config)->getTable('order');
+		$table  = \Oihso\DPD\DB\Connection::getInstance($config)->getTable('order');
 		$orders = $table->find([
 			'where' => 'ORDER_STATUS = :order_status',
 			'order' => 'ORDER_DATE_STATUS ASC, ORDER_DATE_CREATE ASC',
 			'limit' => '0,200',
 			'bind'  => [
-				':order_status' => \Ipol\DPD\Order::STATUS_PENDING
+				':order_status' => \Oihso\DPD\Order::STATUS_PENDING
 			]
 		])->fetchAll(\PDO::FETCH_CLASS|\PDO::FETCH_PROPS_LATE, $table->getModelClass(), [$table]);
 
@@ -98,7 +98,7 @@ class Agents
 
 
 			foreach ($states as $state) {
-				$order = \Ipol\DPD\DB\Connection::getInstance($config)->getTable('order')->getByOrderId($state['CLIENT_ORDER_NR']);
+				$order = \Oihso\DPD\DB\Connection::getInstance($config)->getTable('order')->getByOrderId($state['CLIENT_ORDER_NR']);
 				
 				if (!$order) {
 					continue;
@@ -143,7 +143,7 @@ class Agents
 	/**
 	 * Загружает в локальную БД данные о местоположениях и терминалах
 	 * 
-	 * @param \Ipol\DPD\Config\ConfigInterface $config
+	 * @param \Oihso\DPD\Config\ConfigInterface $config
 	 * 
 	 * @return string
 	 */
@@ -151,11 +151,11 @@ class Agents
 	{
 		$api = API::getInstanceByConfig($config);
 
-		$locationTable  = \Ipol\DPD\DB\Connection::getInstance($config)->getTable('location');
-		$terminalTable  = \Ipol\DPD\DB\Connection::getInstance($config)->getTable('terminal');
+		$locationTable  = \Oihso\DPD\DB\Connection::getInstance($config)->getTable('location');
+		$terminalTable  = \Oihso\DPD\DB\Connection::getInstance($config)->getTable('terminal');
 
-		$locationLoader = new \Ipol\DPD\DB\Location\Agent($api, $locationTable);
-		$terminalLoader = new \Ipol\DPD\DB\Terminal\Agent($api, $terminalTable);
+		$locationLoader = new \Oihso\DPD\DB\Location\Agent($api, $locationTable);
+		$terminalLoader = new \Oihso\DPD\DB\Terminal\Agent($api, $terminalTable);
 
 		$currStep = $config->get('LOAD_EXTERNAL_DATA_STEP');
 		$position = $config->get('LOAD_EXTERNAL_DATA_POSITION');

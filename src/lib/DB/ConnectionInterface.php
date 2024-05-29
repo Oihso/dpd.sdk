@@ -1,5 +1,5 @@
 <?php
-namespace Ipol\DPD\DB;
+namespace Oihso\DPD\DB;
 
 /**
  * Интерфейс соединения с БД

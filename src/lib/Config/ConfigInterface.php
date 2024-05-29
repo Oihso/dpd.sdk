@@ -1,5 +1,5 @@
 <?php
-namespace Ipol\DPD\Config;
+namespace Oihso\DPD\Config;
 
 /**
  * Интерфейс конфига

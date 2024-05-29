@@ -1,9 +1,9 @@
 <?php
-namespace Ipol\DPD\DB\Order;
+namespace Oihso\DPD\DB\Order;
 
-use \Ipol\DPD\Order as DpdOrder;
-use \Ipol\DPD\DB\Model as BaseModel;
-use \Ipol\DPD\Shipment;
+use \Oihso\DPD\Order as DpdOrder;
+use \Oihso\DPD\DB\Model as BaseModel;
+use \Oihso\DPD\Shipment;
 
 /**
  * Модель одной записи таблицы заказов
@@ -15,7 +15,7 @@ class Model extends BaseModel
 	
 	/**
 	 * Отправление
-	 * @var \Ipol\DPD\Shipment
+	 * @var \Oihso\DPD\Shipment
 	 */
 	protected $shipment;
 
@@ -70,7 +70,7 @@ class Model extends BaseModel
 	 *
 	 * @param bool $forced true - создает новый инстанс на основе полей записи
 	 * 
-	 * @return \Ipol\DPD\Shipment
+	 * @return \Oihso\DPD\Shipment
 	 */
 	public function getShipment($forced = false)
 	{
@@ -100,7 +100,7 @@ class Model extends BaseModel
 	 * Ассоциирует внешнюю отправку с записью
 	 * Происходит заполнение полей записи на основе данных отправки
 	 * 
-	 * @param \Ipol\DPD\Shipment $shipment
+	 * @param \Oihso\DPD\Shipment $shipment
 	 * 
 	 * @return self
 	 */
@@ -654,7 +654,7 @@ class Model extends BaseModel
 	/**
 	 * Возвращает инстанс для работы с внешним заказом
 	 *
-	 * @return \Ipol\DPD\Order;
+	 * @return \Oihso\DPD\Order;
 	 */
 	public function dpd()
 	{

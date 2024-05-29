@@ -1,5 +1,5 @@
 <?php
-namespace Ipol\DPD\DB\Location;
+namespace Oihso\DPD\DB\Location;
 
 /**
  * Класс обеспечивающий приведение различных адресов к единой форме

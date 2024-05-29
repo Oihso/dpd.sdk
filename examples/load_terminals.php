@@ -5,12 +5,12 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 $options = require __DIR__ .'/config.php';
-$config  = new \Ipol\DPD\Config\Config($options);
+$config  = new \Oihso\DPD\Config\Config($options);
 
-$table   = \Ipol\DPD\DB\Connection::getInstance($config)->getTable('terminal');
-$api     = \Ipol\DPD\API\User\User::getInstanceByConfig($config);
+$table   = \Oihso\DPD\DB\Connection::getInstance($config)->getTable('terminal');
+$api     = \Oihso\DPD\API\User\User::getInstanceByConfig($config);
 
-$loader = new \Ipol\DPD\DB\Terminal\Agent($api, $table);
+$loader = new \Oihso\DPD\DB\Terminal\Agent($api, $table);
 $step   = isset($_GET['step']) ? $_GET['step'] : 1;
 $pos    = isset($_GET['pos'])  ? $_GET['pos']  : null;
 

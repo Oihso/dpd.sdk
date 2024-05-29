@@ -1,7 +1,7 @@
 <?php
-namespace Ipol\DPD\DB\Location;
+namespace Oihso\DPD\DB\Location;
 
-use Ipol\DPD\DB\AbstractTable;
+use Oihso\DPD\DB\AbstractTable;
 
 /**
  * Класс для работы с таблицей местоположений
@@ -15,7 +15,7 @@ class Table extends AbstractTable
 	 */
 	public function getTableName()
 	{
-		return 'b_ipol_dpd_location';
+		return 'b_Oihso_dpd_location';
 	}
 
 	/**
@@ -45,7 +45,7 @@ class Table extends AbstractTable
 	/**
 	 * Возвращает normalizer адресов
 	 * 
-	 * @return \Ipol\DPD\DB\Location\Normalizer
+	 * @return \Oihso\DPD\DB\Location\Normalizer
 	 */
 	public function getNormalizer()
 	{

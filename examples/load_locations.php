@@ -6,11 +6,11 @@ ini_set('display_errors', 1);
 ini_set('max_execution_time', 30);
 
 $options = require __DIR__ .'/config.php';
-$config  = new \Ipol\DPD\Config\Config($options);
-$table   = \Ipol\DPD\DB\Connection::getInstance($config)->getTable('location');
-$api     = \Ipol\DPD\API\User\User::getInstanceByConfig($config);
+$config  = new \Oihso\DPD\Config\Config($options);
+$table   = \Oihso\DPD\DB\Connection::getInstance($config)->getTable('location');
+$api     = \Oihso\DPD\API\User\User::getInstanceByConfig($config);
 
-$loader = new \Ipol\DPD\DB\Location\Agent($api, $table);
+$loader = new \Oihso\DPD\DB\Location\Agent($api, $table);
 $step   = isset($_GET['step']) ? $_GET['step'] : 1;
 $pos    = isset($_GET['pos'])  ? $_GET['pos']  : null;
 

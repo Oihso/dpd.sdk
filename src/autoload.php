@@ -1,5 +1,5 @@
 <?php
-namespace Ipol\DPD;
+namespace Oihso\DPD;
 
 spl_autoload_register(function ( $className ) {
     if( strpos($className, __NAMESPACE__) === 0) {

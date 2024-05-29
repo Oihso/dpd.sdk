@@ -1,10 +1,10 @@
 <?php
-namespace Ipol\DPD;
+namespace Oihso\DPD;
 
-use Ipol\DPD\API\User\User;
-use Ipol\DPD\Config\ConfigInterface;
-use Ipol\DPD\DB\Connection as DB;
-use Ipol\DPD\Currency\ConverterInterface;
+use Oihso\DPD\API\User\User;
+use Oihso\DPD\Config\ConfigInterface;
+use Oihso\DPD\DB\Connection as DB;
+use Oihso\DPD\Currency\ConverterInterface;
 
 /**
  * Класс для работы с отправкой
@@ -36,7 +36,7 @@ class Shipment
 	/**
 	 * Конструктор класса
 	 * 
-	 * @param \Ipol\DPD\Config\ConfigInterface $config
+	 * @param \Oihso\DPD\Config\ConfigInterface $config
 	 */
 	public function __construct(ConfigInterface $config)
 	{
@@ -49,7 +49,7 @@ class Shipment
 	/**
 	 * Устанавливает конфиг для работы
 	 * 
-	 * @param \Ipol\DPD\Config\ConfigInterface $config
+	 * @param \Oihso\DPD\Config\ConfigInterface $config
 	 * 
 	 * @return self
 	 */
@@ -63,7 +63,7 @@ class Shipment
 	/**
 	 * Возвращает конфиг
 	 * 
-	 * @return \Ipol\DPD\Config\ConfigInterface
+	 * @return \Oihso\DPD\Config\ConfigInterface
 	 */
 	public function getConfig()
 	{
@@ -73,7 +73,7 @@ class Shipment
 	/**
 	 * Возвращает инстанс для работы с БД
 	 * 
-	 * @return \Ipol\DPD\DB\ConnectionInterface
+	 * @return \Oihso\DPD\DB\ConnectionInterface
 	 */
 	public function getDB()
 	{
@@ -547,7 +547,7 @@ class Shipment
 	/**
 	 * Устанавливает конвертер валюты
 	 * 
-	 * @param \Ipol\DPD\Currency\ConverterInterface $converter
+	 * @param \Oihso\DPD\Currency\ConverterInterface $converter
 	 * 
 	 * @return self
 	 */
@@ -561,7 +561,7 @@ class Shipment
 	/**
 	 * Возвращает конвертер валюты
 	 * 
-	 * @return \Ipol\DPD\Currency\ConverterInterface $converter
+	 * @return \Oihso\DPD\Currency\ConverterInterface $converter
 	 */
 	public function getCurrencyConverter()
 	{
@@ -571,9 +571,9 @@ class Shipment
 	/**
 	 * Возвращает калькулятор для расчета стоимости доставки посылки
 	 * 
-	 * @param \Ipol\DPD\API\User\UserInterface $api
+	 * @param \Oihso\DPD\API\User\UserInterface $api
 	 * 
-	 * @return \Ipol\DPD\Calculator
+	 * @return \Oihso\DPD\Calculator
 	 */
 	public function calculator(User $api = null)
 	{

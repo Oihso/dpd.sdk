@@ -1,7 +1,7 @@
 <?php
-namespace Ipol\DPD\DB\Terminal;
+namespace Oihso\DPD\DB\Terminal;
 
-use \Ipol\DPD\DB\AbstractTable;
+use \Oihso\DPD\DB\AbstractTable;
 
 /**
  * Класс для работы с таблицей терминалов
@@ -15,7 +15,7 @@ class Table extends AbstractTable
 	 */
 	public function getTableName()
 	{
-		return 'b_ipol_dpd_terminal';
+		return 'b_Oihso_dpd_terminal';
 	}
 	
 	/**
@@ -25,7 +25,7 @@ class Table extends AbstractTable
 	 */
 	public function getModelClass()
 	{
-		return \Ipol\DPD\DB\Terminal\Model::class;
+		return \Oihso\DPD\DB\Terminal\Model::class;
 	}
 
 	/**

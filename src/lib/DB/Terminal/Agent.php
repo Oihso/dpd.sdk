@@ -1,9 +1,9 @@
 <?php
-namespace Ipol\DPD\DB\Terminal;
+namespace Oihso\DPD\DB\Terminal;
 
-use \Ipol\DPD\API\User\UserInterface;
-use \Ipol\DPD\DB\TableInterface;
-use \Ipol\DPD\Utils;
+use \Oihso\DPD\API\User\UserInterface;
+use \Oihso\DPD\DB\TableInterface;
+use \Oihso\DPD\Utils;
 
 /**
  * Класс реализует методы обновления информации о ПВЗ
@@ -15,8 +15,8 @@ class Agent
 	/**
 	 * Конструктор
 	 * 
-	 * @param \Ipol\DPD\API\User\UserInterface $api   инстанс API
-	 * @param \Ipol\DPD\DB\TableInterface      $table инстанс таблицы для записи данных в БД
+	 * @param \Oihso\DPD\API\User\UserInterface $api   инстанс API
+	 * @param \Oihso\DPD\DB\TableInterface      $table инстанс таблицы для записи данных в БД
 	 */
 	public function __construct(UserInterface $api, TableInterface $table)
 	{
@@ -25,7 +25,7 @@ class Agent
 	}
 
 	/**
-	 * @return \Ipol\DPD\User\UserInterface
+	 * @return \Oihso\DPD\User\UserInterface
 	 */
 	public function getApi()
 	{
@@ -33,7 +33,7 @@ class Agent
 	}
 
 	/**
-	 * @return \Ipol\DPD\DB\Location\Table
+	 * @return \Oihso\DPD\DB\Location\Table
 	 */
 	public function getTable()
 	{

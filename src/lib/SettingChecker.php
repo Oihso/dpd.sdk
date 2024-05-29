@@ -1,4 +1,4 @@
-<?php namespace Ipol\DPD;
+<?php namespace Oihso\DPD;
 
 class SettingChecker
 {

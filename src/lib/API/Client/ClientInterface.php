@@ -1,5 +1,5 @@
 <?php
-namespace Ipol\DPD\API\Client;
+namespace Oihso\DPD\API\Client;
 
 /**
  * Интерфейс подключения к API

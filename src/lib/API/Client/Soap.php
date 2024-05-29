@@ -1,8 +1,8 @@
 <?php
-namespace Ipol\DPD\API\Client;
+namespace Oihso\DPD\API\Client;
 
-use \Ipol\DPD\API\User\UserInterface;
-use \Ipol\DPD\Utils;
+use \Oihso\DPD\API\User\UserInterface;
+use \Oihso\DPD\Utils;
 use \Symfony\Component\Cache\Adapter\FilesystemAdapter;
 
 /**
@@ -44,7 +44,7 @@ class Soap extends \SoapClient implements ClientInterface
 	 * Конструктор класса
 	 * 
 	 * @param string                           $wsdl     адрес SOAP-api
-	 * @param \Ipol\DPD\API\User\UserInterface $user     инстанс подключения к API    
+	 * @param \Oihso\DPD\API\User\UserInterface $user     инстанс подключения к API    
 	 * @param array                            $options  опции для SOAP
 	 */
 	public function __construct($wsdl, UserInterface $user, array $options = array())

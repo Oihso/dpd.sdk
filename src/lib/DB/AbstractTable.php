@@ -1,5 +1,5 @@
 <?php
-namespace Ipol\DPD\DB;
+namespace Oihso\DPD\DB;
 
 /**
  * Абстрактный класс реализующий взаимодействие с одной таблицей
@@ -11,7 +11,7 @@ abstract class AbstractTable implements TableInterface
     /**
      * Конструктор класса
      * 
-     * @param \Ipol\DPD\DB\ConnectionInterface
+     * @param \Oihso\DPD\DB\ConnectionInterface
      */
     public function __construct(ConnectionInterface $connection)
     {
@@ -21,7 +21,7 @@ abstract class AbstractTable implements TableInterface
     /**
      * Возвращает соединение с БД
      * 
-     * @return \Ipol\DPD\DB\ConnectionInterface
+     * @return \Oihso\DPD\DB\ConnectionInterface
      */
     public function getConnection() 
     {
@@ -31,7 +31,7 @@ abstract class AbstractTable implements TableInterface
     /**
      * Возвращает конфиг
      * 
-     * @return \Ipol\DPD\Config\ConfigInterface
+     * @return \Oihso\DPD\Config\ConfigInterface
      */
     public function getConfig()
     {
@@ -55,13 +55,13 @@ abstract class AbstractTable implements TableInterface
      */
     public function getModelClass()
     {
-        return \Ipol\DPD\DB\Model::class;
+        return \Oihso\DPD\DB\Model::class;
     }
 
     /**
      * Возвращает инстанс модели ассоциированной с таблицой
      * 
-     * @return \Ipol\DPD\DB\Model
+     * @return \Oihso\DPD\DB\Model
      */
     public function makeModel($id = false)
     {

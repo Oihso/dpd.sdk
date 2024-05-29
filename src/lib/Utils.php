@@ -1,5 +1,5 @@
 <?php
-namespace Ipol\DPD;
+namespace Oihso\DPD;
 
 /**
  * Класс содержит вспомогательные методы для работы с модулем

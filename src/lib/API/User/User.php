@@ -1,8 +1,8 @@
 <?php
-namespace Ipol\DPD\API\User;
+namespace Oihso\DPD\API\User;
 
-use \Ipol\DPD\Config\ConfigInterface;
-use \Ipol\DPD\Config\Config;
+use \Oihso\DPD\Config\ConfigInterface;
+use \Oihso\DPD\Config\Config;
 
 /**
  * Класс реализует доступ к метода API
@@ -13,14 +13,14 @@ class User implements UserInterface
 	 * @var array
 	 */
 	public static $classmap = array(
-		'geography'      => '\\Ipol\\DPD\\API\\Service\\Geography',
-		'geography_old'  => '\\Ipol\\DPD\\API\\Service\\GeographyOld',
-		'calculator'     => '\\Ipol\\DPD\\API\\Service\\Calculator',
-		'order'          => '\\Ipol\\DPD\\API\\Service\\Order',
-		'label-print'    => '\\Ipol\\DPD\\API\\Service\\LabelPrint',
-		'tracking'       => '\\Ipol\\DPD\\API\\Service\\Tracking',
-		'tracking-order' => '\\Ipol\\DPD\\API\\Service\\TrackingOrder',
-		'event-tracking' => '\\Ipol\\DPD\\API\\Service\\EventTracking',
+		'geography'      => '\\Oihso\\DPD\\API\\Service\\Geography',
+		'geography_old'  => '\\Oihso\\DPD\\API\\Service\\GeographyOld',
+		'calculator'     => '\\Oihso\\DPD\\API\\Service\\Calculator',
+		'order'          => '\\Oihso\\DPD\\API\\Service\\Order',
+		'label-print'    => '\\Oihso\\DPD\\API\\Service\\LabelPrint',
+		'tracking'       => '\\Oihso\\DPD\\API\\Service\\Tracking',
+		'tracking-order' => '\\Oihso\\DPD\\API\\Service\\TrackingOrder',
+		'event-tracking' => '\\Oihso\\DPD\\API\\Service\\EventTracking',
 	);
 
 	/**
@@ -55,7 +55,7 @@ class User implements UserInterface
 	 * 
 	 * @param string $alias
 	 * 
-	 * @return \Ipol\DPD\User\UserInterface
+	 * @return \Oihso\DPD\User\UserInterface
 	 */
 	public static function getInstanceByAlias($alias)
 	{
@@ -69,7 +69,7 @@ class User implements UserInterface
     /**
 	 * Возвращает инстанс класса с параметрами доступа указанными в настройках
 	 * 
-	 * @return \Ipol\DPD\User\UserInterface
+	 * @return \Oihso\DPD\User\UserInterface
 	 */
 	public static function getInstanceByConfig(ConfigInterface $config, $account = false)
 	{
@@ -157,7 +157,7 @@ class User implements UserInterface
 	 * 
 	 * @param  string $serviceName имя службы
 	 * 
-	 * @return \Ipol\API\Service\ServiceInterface
+	 * @return \Oihso\API\Service\ServiceInterface
 	 */
 	public function getService($serviceName)
 	{

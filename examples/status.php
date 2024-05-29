@@ -2,6 +2,6 @@
 require __DIR__ .'/../src/autoload.php';
 
 $options = require __DIR__ .'/config.php';
-$config  = new \Ipol\DPD\Config\Config($options);
+$config  = new \Oihso\DPD\Config\Config($options);
 
-\Ipol\DPD\Agents::checkOrderStatus($config);
+\Oihso\DPD\Agents::checkOrderStatus($config);

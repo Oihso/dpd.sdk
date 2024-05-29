@@ -1,8 +1,8 @@
 <?php
-namespace Ipol\DPD\DB;
+namespace Oihso\DPD\DB;
 
 use \Bitrix\Main\SystemException;
-use \Ipol\DPD\Utils;
+use \Oihso\DPD\Utils;
 
 /**
  * Класс модели таблицы
@@ -25,12 +25,12 @@ class Model implements \ArrayAccess
 	protected $fields = false;
 
 	/**
-	 * @var \Ipol\DPD\DB\TableInterface
+	 * @var \Oihso\DPD\DB\TableInterface
 	 */
 	protected $table;
 
 	/**
-	 * @return \Ipol\DPD\DB\TableInterface
+	 * @return \Oihso\DPD\DB\TableInterface
 	 */
 	public function getTable()
 	{

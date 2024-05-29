@@ -1,8 +1,8 @@
 <?php
-namespace Ipol\DPD\API\Service;
+namespace Oihso\DPD\API\Service;
 
-use \Ipol\DPD\API\User\UserInterface;
-use \Ipol\DPD\API\Client\Factory as ClientFactory;
+use \Oihso\DPD\API\User\UserInterface;
+use \Oihso\DPD\API\Client\Factory as ClientFactory;
 
 /**
  * Служба по работе с географическими данными
@@ -16,7 +16,7 @@ class Geography implements ServiceInterface
 	/**
      * Конструктор класса
      * 
-     * @param \Ipol\DPD\API\User\UserInterface
+     * @param \Oihso\DPD\API\User\UserInterface
      */
 	public function __construct(UserInterface $user)
 	{

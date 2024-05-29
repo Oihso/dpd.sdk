@@ -4,7 +4,7 @@
 
 require __DIR__ .'/vendor/dpd.sdk/src/autoload.php';
 
-use \Ipol\DPD\API\User\User as ApiClient;
+use \Oihso\DPD\API\User\User as ApiClient;
 
 $client = new ApiClient(
     $clientNumber = 'КЛИЕНТСКИЙ_НОМЕР', 
