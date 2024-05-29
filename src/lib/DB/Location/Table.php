@@ -15,7 +15,7 @@ class Table extends AbstractTable
 	 */
 	public function getTableName()
 	{
-		return 'b_Oihso_dpd_location';
+		return 'b_oihso_dpd_location';
 	}
 
 	/**
