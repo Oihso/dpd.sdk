@@ -1,4 +1,4 @@
-create table IF NOT EXISTS b_ipol_dpd_location (
+create table IF NOT EXISTS b_oihso_dpd_location (
 	ID int not null auto_increment,
 	
 	COUNTRY_CODE varchar(255) null,
@@ -23,7 +23,7 @@ create table IF NOT EXISTS b_ipol_dpd_location (
 	primary key (ID)
 ) DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE INDEX b_ipol_dpd_location_city ON  b_ipol_dpd_location (CITY_ID);
-CREATE INDEX b_ipol_dpd_location_crc ON b_ipol_dpd_location (CITY_NAME, REGION_NAME, COUNTRY_NAME);
-CREATE INDEX b_ipol_dpd_location_search_text ON b_ipol_dpd_location (ORIG_NAME_LOWER);
-CREATE INDEX b_ipol_dpd_location_is_city ON b_ipol_dpd_location (IS_CITY);
+CREATE INDEX b_oihso_dpd_location_city ON  b_oihso_dpd_location (CITY_ID);
+CREATE INDEX b_oihso_dpd_location_crc ON b_oihso_dpd_location (CITY_NAME, REGION_NAME, COUNTRY_NAME);
+CREATE INDEX b_oihso_dpd_location_search_text ON b_oihso_dpd_location (ORIG_NAME_LOWER);
+CREATE INDEX b_oihso_dpd_location_is_city ON b_oihso_dpd_location (IS_CITY);

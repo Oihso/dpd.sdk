@@ -1,4 +1,4 @@
-create table IF NOT EXISTS b_ipol_dpd_terminal (
+create table IF NOT EXISTS b_oihso_dpd_terminal (
 	ID int not null auto_increment,
 
 	LOCATION_ID varchar(255) null,

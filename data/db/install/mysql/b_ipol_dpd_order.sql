@@ -1,4 +1,4 @@
-create table IF NOT EXISTS b_ipol_dpd_order (
+create table IF NOT EXISTS b_oihso_dpd_order (
 	ID int not null auto_increment,
 
 	ORDER_ID varchar(255) null,
