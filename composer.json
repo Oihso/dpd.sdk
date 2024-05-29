@@ -1,5 +1,5 @@
 {
-    "name": "ipol/dpd.sdk",
+    "name": "oihso/dpd.sdk",
     "description": "",
     "version": "1.0.0",
     "license": "MIT",
@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Ipol\\DPD\\": "src/lib"
+            "Oihso\\DPD\\": "src/lib"
         }
     }
 }
